@@ -7,7 +7,7 @@ class OndeComerSitemap(Sitemap):
     priority = 0.5
  
     def items(self):
-        return OndeComer.objects.filter(is_draft=False)
+        return OndeComer.objects.all()
  
     def lastmod(self, obj):
-        return obj.pub_date
+        return obj.created

@@ -5,8 +5,13 @@ from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
 from django.conf.urls import url, include
 from django.contrib import admin
+from ondecomer.sitemaps import OndeComerSitemap
 from core import views
-from . import sitemaps
+
+sitemaps = {
+	'sitemaps': OndeComerSitemap,
+}
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

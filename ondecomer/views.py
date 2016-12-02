@@ -14,7 +14,7 @@ class ListarListView(generic.ListView):
 listar = ListarListView.as_view()
 
 class CategoryListView(generic.ListView):
-    template_name = 'ondecomer/descricao.html'
+    template_name = 'ondecomer/descricao-ondecomer.html'
     context_object_name = 'object_list'
     paginate_by = 3
 
@@ -34,7 +34,7 @@ def ondecomer(request, slug):
     context = {
         'ondecomer': ondecomer
     }
-    return render(request, 'ondecomer/slide.html', context)
+    return render(request, 'ondecomer/slide-ondecomer.html', context)
 
 
 
